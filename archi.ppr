@@ -1,0 +1,152 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.LogType=0
+DefaultDir=D:\git\archi
+DefaultCPIndex=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+Extensions=*.*
+[Project tree]
+archi
+	+archi
+		-.git
+			-hooks
+				.git\hooks\applypatch-msg.sample
+				.git\hooks\commit-msg.sample
+				.git\hooks\post-commit.sample
+				.git\hooks\post-receive.sample
+				.git\hooks\post-update.sample
+				.git\hooks\pre-applypatch.sample
+				.git\hooks\pre-commit.sample
+				.git\hooks\prepare-commit-msg.sample
+				.git\hooks\pre-rebase.sample
+				.git\hooks\update.sample
+			-info
+				.git\info\exclude
+			-logs
+				-refs
+					-heads
+						.git\logs\refs\heads\master
+					-remotes
+						-origin
+							.git\logs\refs\remotes\origin\master
+				.git\logs\HEAD
+			-objects
+				-0c
+					.git\objects\0c\dbd610664957d2d729dbd36a16bbb13d8d371f
+				-0e
+					.git\objects\0e\e6c3f19d5936d65280524c56c2cac57e726fa3
+				-1b
+					.git\objects\1b\0aabe30869c6954a0c9ade2f3f49b6b906448c
+				-1e
+					.git\objects\1e\a2fe8bf0412dfa5b07887289b4e685fa09af46
+				-27
+					.git\objects\27\49f609ff6f3ac42cfa7c34c9f6832cfa3be39b
+				-2b
+					.git\objects\2b\03249d75f94fa22b457259710cf4349e92ae86
+				-35
+					.git\objects\35\84e4cfade3a7ae9ec5bdbfa9ae73bda335675f
+				-3b
+					.git\objects\3b\22127f4e6af1411d32d57c79a335a1c79c1226
+				-4f
+					.git\objects\4f\ef841c3859bd0f8299745a9c2cf55071700897
+				-58
+					.git\objects\58\bc28e4b4ff6ef04a93b6719c6bf582282a7c85
+				-59
+					.git\objects\59\92020bd5b2fe3f7a3d31e4d5ff0ea494735c5d
+				-5c
+					.git\objects\5c\29e9ce1586cd6e9b426bc7a37edc9014a6c4bb
+				-5f
+					.git\objects\5f\1d707f7b28d94edf941e6bfcd3b1fe73e73dd1
+				-60
+					.git\objects\60\a9bf7a4b91cbfe451143aa8da595cf85540e19
+				-82
+					.git\objects\82\7189ccbcf5b6d98a3aa3bb48ce32ece644d8cd
+				-88
+					.git\objects\88\bebb5d49599dae18ae3d848e55e75b90fbffdb
+				-92
+					.git\objects\92\2e775d8659a2cbd8c5298524e651d9c748e789
+				-b9
+					.git\objects\b9\d19be0e255968560491671db7abb4a20fb4f2d
+				-be
+					.git\objects\be\f2d8d121fe22bf6b54b34f66480888f26e138b
+				-bf
+					.git\objects\bf\f018e6e4f35b13aa3ff7ff840085923d1810b3
+				-c2
+					.git\objects\c2\bcc45e6b663a18ad4eddfc4f20b5929cb60a4d
+				-e0
+					.git\objects\e0\4d4468fad42e20adf471dea48f0ca09de751ea
+				-e3
+					.git\objects\e3\caef538b155dbe27f3bc8e01cb9a5916b173f4
+				-e6
+					.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+				-e7
+					.git\objects\e7\be153f21832d53b1261cf8a14e2b479e17a04f
+			-refs
+				-heads
+					.git\refs\heads\master
+				-remotes
+					-origin
+						.git\refs\remotes\origin\master
+			.git\COMMIT_EDITMSG
+			.git\config
+			.git\description
+			.git\FETCH_HEAD
+			.git\HEAD
+			.git\index
+			.git\ORIG_HEAD
+		-bin
+			-xml
+				-archi
+					bin\xml\archi\.readme
+					bin\xml\archi\archi.xsd
+					bin\xml\archi\archi1.xsd
+					bin\xml\archi\Archisurance.archimate.out.xml
+					bin\xml\archi\Archisurance.archimate.xml
+					bin\xml\archi\Archisurance.archimate.xml.orig
+					bin\xml\archi\OpenDay.archimate.xml
+					bin\xml\archi\validation.xml
+				-other
+					bin\xml\other\.readme
+			-xsl
+				-export
+					bin\xsl\export\.readme
+					bin\xsl\export\matrice_1.xslt
+				-import
+					bin\xsl\import\.readme
+			bin\.gitignore
+			bin\.project
+			bin\.readme
+			bin\archi.spp
+			bin\README.md
+		-xml
+			-archi
+				xml\archi\.readme
+				xml\archi\archi.xsd
+				xml\archi\archi1.xsd
+				xml\archi\Archisurance.archimate.out.xml
+				xml\archi\Archisurance.archimate.xml
+				xml\archi\Archisurance.archimate.xml.orig
+				xml\archi\OpenDay.archimate.xml
+				xml\archi\validation.xml
+			-other
+				xml\other\.readme
+		-xsl
+			-export
+				xsl\export\.readme
+				xsl\export\matrice_1.xslt
+			-import
+				xsl\import\.readme
+		.gitignore
+		.project
+		.readme
+		archi.spp
+		README.md
+[Open project files]
+[Selected Project Files]
+Main=
