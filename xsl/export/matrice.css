@@ -11,7 +11,7 @@ body
 	font-weight:bold;  
 }
 
-.nameOfFolder {
+.TopLevel{
 	color:#0588BA;
 	font-family:Arial;
 	font-size:14pt;
@@ -20,6 +20,13 @@ body
 	border-top-color:#0588ba; 
 	border-top-style:solid; 
 	border-top-width:2pt; 
+}
+
+.SecondLevel{
+	color:#0588BA;
+	font-family:Arial;
+	font-size:10pt;
+	font-weight:bold;  
 }
 
 .nameOfFolder2 {

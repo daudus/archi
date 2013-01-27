@@ -2,21 +2,25 @@
 <!--Template to transform ARCHI 2.2.0. XML model to the table form in CSV with semicolon -->
 <!-- The intent is to describe one hierarchy (taxonomy) of artefacts on the left side and the linked with another artifact (also with possible hierarchy) on the right side. For example: Let imagine the hierarchy of business "functions" (from domain, subdomain, areas, ..., functions) and you are interested in relationships between these functions and application services or business processes and so on with respect on depicting their hierarchies. Hierarchies are defined by directory/folder structure.  -->
 <!--Expected output is CSV : (example):-->
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:archimate="http://www.bolton.ac.uk/archimate" xmlns:dsk="http://www.d.eu" xmlns:n1="http://www.s.eu/schemas/archi">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:archimate="http://www.bolton.ac.uk/archimate" xmlns:dsk="http://www.d.eu" xmlns:n1="http://www.s.eu/schemas/archi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!--<xsl:output version="1.0" method="xhtml" indent="no" encoding="UTF-8" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>-->
 	<xsl:output version="1.0" method="xml" indent="yes" encoding="UTF-8"/>
 	<!--Top level hierarchy directory/folder-->
+	<!-- methodologicaly suppose the required (fixed) logic of directories/folders: <model>/<folder>/<folder>. Next structure of levels as neededand is ignored  -->
+	<!-- Note the use of Actor icons instead of “roles” that the ArchiMate specification encourages. I find the notion of “role” to be a little abstract for some people. That’s why I often skip it and depict actors instead. Everyone understands a stick figure.-->
+	<!-- use Business Functions for higher level groupings of Business Processes (i.e finance management) that are closely associated with Organisation Units-->
 	<xsl:variable name="XML" select="/archimate:model/folder[@type='business' or @type='application']"/>
+	<xsl:variable name="ARCHIMATE_PREFIX" select="'archimate:'"/>
 	<xsl:param name="mybreak"><![CDATA[<br/>]]></xsl:param>
+	<xsl:param name="mytab"><![CDATA[&#160;&#160;&#160;&#160;&#160;]]></xsl:param>
 
-	<xsl:param name="leftSideHierarchy" select="/archimate:model/folder[@type='business']/folder[@name='Functions']"/>
-	<xsl:param name="rightSideHierarchy" select="/archimate:model/folder[@type='application']/folder"/>
 	<xsl:param name="SV_OutputFormat" select="'HTML'"/>
 	
 	<!-- creates the simple structure: folder[@type]/element. The text value of each element is the depth of the source element.-->
 	<!--ad WARNING(1)! -->
 	<!--ad WARNING(2)! -->
 	<xsl:variable name="DepthStructure">
+		<xsl:message>DepthStrucuture</xsl:message>
 		<dsk:xroot>
 			<xsl:for-each select="$XML">
 				<xsl:sort select="@name" order="ascending" data-type="text"/>
@@ -47,6 +51,7 @@
 	<!--ad WARNING(1)! -->
 	<!--ad WARNING(2)! -->
 	<xsl:variable name="MaxDepthStructure">
+		<xsl:message>DepthStrucuture</xsl:message>
 		<dsk:xroot>
 			<xsl:for-each select="$DepthStructure/dsk:xroot/dsk:element">
 				<dsk:element>
@@ -65,7 +70,7 @@
 	</xsl:variable> 
 	
 	<xsl:template match="/" priority="10">
-		<xsl:message>Production template</xsl:message>
+		<xsl:message>Production template "/"</xsl:message>
 		<html>
 			<head>
 				<title>
@@ -79,63 +84,104 @@
 				<span class="nameOfModel">
 					<xsl:value-of select="/archimate:model/@name"/>
 				</span>
+				<dsk:toc name="toc"/>
+				<!-- top level category of ArchiMate: Business, Aplication, ...-->
 				<xsl:for-each select="$XML">
 					<dsk:level>
 						<dsk:markerbookmark/>
 						<dsk:marker dsk:name="toc">
 							<xsl:value-of select="concat($mybreak,$mybreak)" disable-output-escaping="yes"/>
-							<span class="nameOfFolder">
+							<span class="TopLevel">
 								<xsl:value-of select="@name"/>
 								<xsl:text>&#160; </xsl:text>
 								<xsl:text>( </xsl:text>
 								<xsl:value-of select="count(child::*)"/>
 								<xsl:text> )</xsl:text>
 							</span>
-							<xsl:call-template name="folder"/>
-						</dsk:marker>
+							<!-- second level category of ArchiMate: Business/Functions and Actors, ..., Aplication/Applications, ...-->
+							<xsl:for-each select="folder">
+								<xsl:value-of select="concat($mybreak,$mybreak)" disable-output-escaping="yes"/>
+								<dsk:level>
+									<dsk:markerbookmark/>
+									<dsk:marker dsk:name="toc">
+										<span class="SecondLevel">
+											<xsl:value-of select="$mytab" disable-output-escaping="yes"/>
+											<xsl:value-of select="@name"/>
+											<xsl:text>&#160;</xsl:text>
+											<!-- RQ 4 -->
+											<xsl:text>( #Elements:&#160;</xsl:text>
+											<xsl:value-of select="count(child::*)"/>
+											<xsl:text> )</xsl:text>
+										</span>
+									</dsk:marker>
+								    <xsl:call-template name="folder">
+									    <xsl:with-param name="folder" select="."/>
+								    </xsl:call-template>
+								</dsk:level>	
+							</xsl:for-each>	
+						</dsk:marker>	
 					</dsk:level>
 				</xsl:for-each>
 			</body>
 		</html>
 	</xsl:template>
 	
-	
+	<!-- for example Business/Function/Actor --> dam to o level vys do sblony a splnim RQ 4
 	<xsl:template name="folder">
+		<xsl:param name="folder"/>
 		<xsl:message>Folder template</xsl:message>
 		<xsl:value-of select="concat($mybreak,$mybreak)" disable-output-escaping="yes"/>
+		<xsl:for-each-group select="$folder//element" group-by="@xsi:type">
+			<xsl:sort select="current-grouping-key()"/>
+			<dsk:level>
+				<xsl:call-template name="table">
+					<xsl:with-param name="group" select="current-group()"/>
+					<xsl:with-param name="type" select="current-grouping-key()"/>
+				</xsl:call-template>
+			</dsk:level>	
+		</xsl:for-each-group>
+	</xsl:template>	
+	
+	<xsl:template name="table">
+		<xsl:param name="group"/>
+		<xsl:param name="type"/>
+		
 		<table border="1" cellpadding="3" cellspacing="0" width="100%">
 			<thead bgcolor="#D2C8AE">
 				<tr >
 					<td align="center" rowspan="2" width="10%">
+						<dsk:bookmark/>
+						<dsk:marker name="toc">
+							<span class="headerOfTable">
+								<xsl:value-of select="substring-after($type,$ARCHIMATE_PREFIX)"/>
+							</span>
+						</dsk:marker>	
+					</td>
+					<td align="center" rowspan="2" width="10%">
 						<span class="headerOfTable">
-							<xsl:text>First</xsl:text>
+							<xsl:text>Lorem ipsum</xsl:text>
 						</span>
 					</td>
 					<td align="center" rowspan="2" width="10%">
 						<span class="headerOfTable">
-							<xsl:text>Last</xsl:text>
-						</span>
-					</td>
-					<td align="center" rowspan="2" width="10%">
-						<span class="headerOfTable">
-							<xsl:text>Last2</xsl:text>
+							<xsl:text>Lorem ipsum2</xsl:text>
 						</span>
 					</td>
 					<td align="center" colspan="2" width="16%">
 						<span class="headerOfTable">
-							<xsl:text>Last3</xsl:text>
+							<xsl:text>Lorem ipsum3</xsl:text>
 						</span>
 					</td>
 				</tr>
 				<tr>
 					<td align="center" width="8%">
 						<span class="headerOfTable">
-							<xsl:text>ddddd</xsl:text>
+							<xsl:text>....</xsl:text>
 						</span>
 					</td>
 					<td align="center"  width="8%">
 						<span class="headerOfTable">
-							<xsl:text>ddddd</xsl:text>
+							<xsl:text>....</xsl:text>
 						</span>
 					</td>
 				</tr>
@@ -144,18 +190,19 @@
 				<tr>
 					<td align="left" colspan="4" valign="top" width="23%">
 						<span class="footerOfTable">
-							<xsl:text>Employees:&#160; </xsl:text>
+							<xsl:text>&#160; </xsl:text>
 						</span>
 					</td>
 					<td align="left" colspan="1" valign="top" width="10%">
 						<span class="footerOfTable">
-							<xsl:text>Shares:&#160; </xsl:text>
+							<xsl:text>&#160; </xsl:text>
 						</span>
 					</td>	
 				</tr>
 			</tfoot>
 			<tbody>
-				<xsl:for-each select="folder|element">
+				<!-- I am not sure that it is good solution in case of <folder> structure in <$group> -->
+				<xsl:for-each select="$group[name()='element']">
 					<xsl:sort select="@name" data-type="text" order="ascending"/>
 					<dsk:level>
 						<tr bgcolor="{if ( position() mod 2 ) then &quot;antiquewhite&quot; else &quot;navajowhite&quot;}">
@@ -193,6 +240,7 @@
 				</xsl:for-each>
 			</tbody>
 		</table>
+    	<xsl:value-of select="concat($mybreak,$mybreak)" disable-output-escaping="yes"/>
 	</xsl:template>
 	
 	
