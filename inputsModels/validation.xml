@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.bolton.ac.uk/archimate" name="Model validation" id="ca39ec2f" version="1.3.0">
+  <folder name="Business" id="a011e3a1" type="business">
+    <element xsi:type="archimate:BusinessProcess" id="05bfd87b" name="Validate">
+      <documentation>validation is started by right clicking on the model in the models tree view and choosing &quot;Model Validation&quot;</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" id="514d8559" name="refining model"/>
+    <element xsi:type="archimate:BusinessProcess" id="43013172" name="Jump to">
+      <documentation>The user clicks to the link in the validation report, and the element is selected.
+</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" id="6be467d3" name="fix">
+      <documentation>The user fixes the problem using other functionality of Archi
+</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" id="6d58f76e" name="Archi user">
+      <documentation>The user who uses Archi</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" id="b4ebba65" name="Model">
+      <documentation>The archimate model to be validated and refined
+</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" id="d5362c7c" name="Element">
+      <documentation>An element in the model.
+We are interested in elements which have same validation problem.
+</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" id="c78f578d" name="Validation report">
+      <documentation>The validation report is in html form, the references to elements encoded as a href attribute of an &lt;a> tag, in the form &quot;archimate:#&lt;id>&quot; where id is the id of the corresponting element.
+Note that this can be extended to &quot;archimate:&lt;model>#&lt;id>&quot; if a need arises.
+</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" id="94be8e56" name="Sets/views">
+      <documentation>The user sets or views the preference item. it is in Edit/preferences/general.
+Setting is possible using a file browser widget or directly entering the path.
+
+</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" id="eb99e91d" name="Validation program">
+      <documentation>The preference element containing the filesystem path to the validation program.
+</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" id="4126a1f5" name="View">
+      <documentation>The user can view the report in the main editing area, in the same place where views shown.
+</documentation>
+    </element>
+  </folder>
+  <folder name="Application" id="6ab1ed2b" type="application">
+    <element xsi:type="archimate:ApplicationInterface" id="e208453b" name="Validation starter">
+      <documentation>The context menu of the model contains a &quot;validate model&quot; entry.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" id="19ba9e82" name="Validation report viewer">
+      <documentation>The user interface is a html browser widget.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" id="59e19910" name="Edit/preferences/general/validation program name">
+      <documentation>See Sets/views.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" id="3332ef7d" name="Validator">
+      <documentation>This service is composed of the validation program runner and the browser. functions.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" id="67d837c0" name="Preferences">
+      <documentation>The preferences service is augmented with validation program path.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" id="43f069d8" name="org.eclipse.swt.browser.Browser">
+      <documentation>A browser widget is used to show the validation report in the main editing area.
+http://www.eclipse.org/articles/Article-SWT-browser-widget/browser.html
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" id="82db5571" name="setText">
+      <documentation>The broswers's setText method is used to put the stdout of the validation program to the view.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" id="3da50d07" name="locationListener">
+      <documentation>It is used to catch the event when the user tries to jump to a archimate: uri.
+http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/browser/LocationListener.html
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" id="44dec8c3" name="Validator program runner">
+      <documentation>Saves the current model, runs the validation program with the pathname of the model file as first argument, catches its output and inserts it into the browser.
+http://www.rgagnon.com/javadetails/java-0014.html</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" id="8a9782c1" name="validation program path">
+      <documentation>The filesystem pathname of the validation program.</documentation>
+    </element>
+  </folder>
+  <folder name="Technology" id="19f1dc89" type="technology">
+    <element xsi:type="archimate:Artifact" id="f7f7cef0" name="Validation program">
+      <documentation>Provided by user.
+Excepts the full pathname of the model to be validated as first argument.
+Outputs html, containing references to elements in the model.
+See Validation report business object for details on the reference format.</documentation>
+    </element>
+  </folder>
+  <folder name="Connectors" id="643e4063" type="connectors"/>
+  <folder name="Relations" id="39cd8477" type="relations">
+    <element xsi:type="archimate:CompositionRelationship" id="3676631b" name="Composition relation" source="514d8559" target="43013172"/>
+    <element xsi:type="archimate:CompositionRelationship" id="1a4f14e4" name="Composition relation" source="514d8559" target="6be467d3"/>
+    <element xsi:type="archimate:FlowRelationship" id="f62cc3e0" name="Flow relation" source="43013172" target="6be467d3"/>
+    <element xsi:type="archimate:FlowRelationship" id="bb9aa890" name="Flow relation" source="05bfd87b" target="514d8559"/>
+    <element xsi:type="archimate:FlowRelationship" id="a5e995fa" name="Flow relation" source="514d8559" target="05bfd87b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="dd4a0485" name="Used By relation" source="6d58f76e" target="514d8559"/>
+    <element xsi:type="archimate:UsedByRelationship" id="aa8a1d5c" name="Used By relation" source="6d58f76e" target="05bfd87b"/>
+    <element xsi:type="archimate:AggregationRelationship" id="12ccd233" name="Aggregation relation" source="b4ebba65" target="d5362c7c"/>
+    <element xsi:type="archimate:AccessRelationship" id="3203fcf8" name="Access relation" source="05bfd87b" target="b4ebba65" accessType="1"/>
+    <element xsi:type="archimate:AccessRelationship" id="6e6fc0ff" name="Access relation" source="05bfd87b" target="c78f578d"/>
+    <element xsi:type="archimate:AccessRelationship" id="1f6de52c" name="Access relation" source="43013172" target="c78f578d" accessType="1"/>
+    <element xsi:type="archimate:AccessRelationship" id="98a6dfc9" name="Access relation" source="43013172" target="d5362c7c" accessType="2"/>
+    <element xsi:type="archimate:AccessRelationship" id="bfc7455f" name="Access relation" source="6be467d3" target="d5362c7c"/>
+    <element xsi:type="archimate:UsedByRelationship" id="766b2df7" name="Used By relation" source="e208453b" target="05bfd87b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="333d3c02" name="Used By relation" source="19ba9e82" target="43013172"/>
+    <element xsi:type="archimate:UsedByRelationship" id="f73c7ac8" name="Used By relation" source="6d58f76e" target="94be8e56"/>
+    <element xsi:type="archimate:AccessRelationship" id="7f85cb00" name="Access relation" source="94be8e56" target="eb99e91d"/>
+    <element xsi:type="archimate:UsedByRelationship" id="34f8c9ae" name="Used By relation" source="59e19910" target="94be8e56"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="59bdd86a" name="Assignment relation" source="e208453b" target="3332ef7d"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="8ed6a594" name="Assignment relation" source="19ba9e82" target="3332ef7d"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="5a881c96" name="Assignment relation" source="59e19910" target="67d837c0"/>
+    <element xsi:type="archimate:CompositionRelationship" id="a5971db3" name="Composition relation" source="43f069d8" target="82db5571"/>
+    <element xsi:type="archimate:CompositionRelationship" id="c21913ff" name="Composition relation" source="43f069d8" target="3da50d07"/>
+    <element xsi:type="archimate:RealisationRelationship" id="439b98c0" name="Realisation relation" source="43f069d8" target="3332ef7d"/>
+    <element xsi:type="archimate:RealisationRelationship" id="a9bb2b5b" name="Realisation relation" source="44dec8c3" target="3332ef7d"/>
+    <element xsi:type="archimate:AccessRelationship" id="3f30ec80" name="Access relation" source="67d837c0" target="8a9782c1"/>
+    <element xsi:type="archimate:AccessRelationship" id="ef879bcb" name="Access relation" source="44dec8c3" target="8a9782c1" accessType="1"/>
+    <element xsi:type="archimate:UsedByRelationship" id="4b84f1d7" name="Used By relation" source="f7f7cef0" target="44dec8c3"/>
+    <element xsi:type="archimate:CompositionRelationship" id="6dea8d47" name="Composition relation" source="514d8559" target="4126a1f5"/>
+    <element xsi:type="archimate:FlowRelationship" id="e0f79ca7" name="Flow relation" source="4126a1f5" target="43013172"/>
+    <element xsi:type="archimate:AccessRelationship" id="b0e3609f" name="Access relation" source="4126a1f5" target="c78f578d" accessType="1"/>
+    <element xsi:type="archimate:UsedByRelationship" id="eb97667c" name="Used By relation" source="82db5571" target="44dec8c3"/>
+    <element xsi:type="archimate:AssociationRelationship" id="4bd98957" name="Association relation" source="43f069d8" target="4126a1f5"/>
+    <element xsi:type="archimate:AssociationRelationship" id="4ff47437" name="Association relation" source="3da50d07" target="43013172"/>
+    <element xsi:type="archimate:AssociationRelationship" id="82d5c010" name="Association relation" source="05bfd87b" target="44dec8c3"/>
+  </folder>
+  <folder name="Views" id="40c914d9" type="diagrams">
+    <element xsi:type="archimate:DiagramModel" id="604b3dd5" name="Use case: model validation">
+      <child xsi:type="archimate:DiagramObject" id="5251bfdc" targetConnections="a0bf824b b5a05953 423ff230" archimateElement="05bfd87b">
+        <bounds x="72" y="233"/>
+        <sourceConnection xsi:type="archimate:Connection" id="7ca8c038" source="5251bfdc" target="6dff17ab" relationship="bb9aa890"/>
+        <sourceConnection xsi:type="archimate:Connection" id="3efda40b" source="5251bfdc" target="02693965" relationship="3203fcf8"/>
+        <sourceConnection xsi:type="archimate:Connection" id="cba9ed4b" source="5251bfdc" target="1d5b8975" relationship="6e6fc0ff"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="6dff17ab" targetConnections="7ca8c038 bc5d9f3d" archimateElement="514d8559">
+        <bounds x="288" y="168" width="469" height="185"/>
+        <sourceConnection xsi:type="archimate:Connection" id="a0bf824b" source="6dff17ab" target="5251bfdc" relationship="a5e995fa">
+          <bendpoint startX="266" startY="-4" endX="656" endY="-4"/>
+          <bendpoint startX="265" startY="104" endX="655" endY="104"/>
+          <bendpoint startX="-473" startY="100" endX="-83" endY="100"/>
+          <bendpoint startX="-475" endX="-85"/>
+        </sourceConnection>
+        <child xsi:type="archimate:DiagramObject" id="ac01f9b6" targetConnections="6a72ceec ff0af79f" archimateElement="43013172">
+          <bounds x="168" y="72"/>
+          <sourceConnection xsi:type="archimate:Connection" id="51fcbbbe" source="ac01f9b6" target="5f5eb2d5" relationship="f62cc3e0"/>
+          <sourceConnection xsi:type="archimate:Connection" id="d9c674a7" source="ac01f9b6" target="1d5b8975" relationship="1f6de52c"/>
+          <sourceConnection xsi:type="archimate:Connection" id="b07a03e9" source="ac01f9b6" target="d0cbf6a1" relationship="98a6dfc9"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="5f5eb2d5" targetConnections="51fcbbbe" archimateElement="6be467d3">
+          <bounds x="324" y="72"/>
+          <sourceConnection xsi:type="archimate:Connection" id="d5458972" source="5f5eb2d5" target="d0cbf6a1" relationship="bfc7455f"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="af2d5216" archimateElement="4126a1f5">
+          <bounds x="12" y="72"/>
+          <sourceConnection xsi:type="archimate:Connection" id="ff0af79f" source="af2d5216" target="ac01f9b6" relationship="e0f79ca7"/>
+          <sourceConnection xsi:type="archimate:Connection" id="c66bb06a" source="af2d5216" target="1d5b8975" relationship="b0e3609f"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="00360698" archimateElement="6d58f76e">
+        <bounds x="372" y="96"/>
+        <sourceConnection xsi:type="archimate:Connection" id="bc5d9f3d" source="00360698" target="6dff17ab" relationship="dd4a0485"/>
+        <sourceConnection xsi:type="archimate:Connection" id="b5a05953" source="00360698" target="5251bfdc" relationship="aa8a1d5c">
+          <bendpoint startX="-145" startY="25" endX="155" endY="-100"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="02693965" targetConnections="3efda40b" archimateElement="b4ebba65">
+        <bounds x="72" y="12" width="157" height="121"/>
+        <child xsi:type="archimate:DiagramObject" id="d0cbf6a1" targetConnections="b07a03e9 d5458972" archimateElement="d5362c7c">
+          <bounds x="24" y="48"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="1d5b8975" targetConnections="cba9ed4b d9c674a7 c66bb06a" archimateElement="c78f578d">
+        <bounds x="300" y="36"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="63c74d70" archimateElement="e208453b">
+        <bounds x="72" y="384"/>
+        <sourceConnection xsi:type="archimate:Connection" id="423ff230" source="63c74d70" target="5251bfdc" relationship="766b2df7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="d20b0438" archimateElement="19ba9e82">
+        <bounds x="300" y="384"/>
+        <sourceConnection xsi:type="archimate:Connection" id="6a72ceec" source="d20b0438" target="ac01f9b6" relationship="333d3c02"/>
+      </child>
+      <documentation>The user validates the report, browses it, and clicks on different links on the report to get to the element which have some problems.
+</documentation>
+    </element>
+    <element xsi:type="archimate:DiagramModel" id="bdadcd2b" name="Application">
+      <child xsi:type="archimate:DiagramObject" id="8d40efe2" archimateElement="e208453b">
+        <bounds x="300" y="36"/>
+        <sourceConnection xsi:type="archimate:Connection" id="89e35f0e" source="8d40efe2" target="7ed50db6" relationship="59bdd86a"/>
+        <sourceConnection xsi:type="archimate:Connection" id="285b5058" source="8d40efe2" target="c4d3a2f1" relationship="766b2df7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="f661f285" archimateElement="19ba9e82">
+        <bounds x="528" y="30"/>
+        <sourceConnection xsi:type="archimate:Connection" id="2e186700" source="f661f285" target="7ed50db6" relationship="8ed6a594"/>
+        <sourceConnection xsi:type="archimate:Connection" id="93a94fe8" source="f661f285" target="65c423c0" relationship="333d3c02"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="7ed50db6" targetConnections="89e35f0e 2e186700 1efb57e3 0867df07" archimateElement="3332ef7d">
+        <bounds x="419" y="144"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="b5094d9d" targetConnections="a940aef4" archimateElement="67d837c0">
+        <bounds x="85" y="144"/>
+        <sourceConnection xsi:type="archimate:Connection" id="96a58d2b" source="b5094d9d" target="b192d557" relationship="3f30ec80"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="4a5d092b" archimateElement="59e19910">
+        <bounds x="60" y="36" width="170" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="a940aef4" source="4a5d092b" target="b5094d9d" relationship="5a881c96"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="2eb60263" archimateElement="43f069d8">
+        <bounds x="452" y="240" width="329" height="121"/>
+        <sourceConnection xsi:type="archimate:Connection" id="1efb57e3" source="2eb60263" target="7ed50db6" relationship="439b98c0"/>
+        <sourceConnection xsi:type="archimate:Connection" id="779b7b81" source="2eb60263" target="1caeceec" relationship="4bd98957"/>
+        <child xsi:type="archimate:DiagramObject" id="50680e60" archimateElement="82db5571">
+          <bounds x="12" y="36"/>
+          <sourceConnection xsi:type="archimate:Connection" id="7355168a" source="50680e60" target="7614dd02" relationship="eb97667c"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="309410b6" archimateElement="3da50d07">
+          <bounds x="144" y="36" width="157" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="12265135" source="309410b6" target="65c423c0" relationship="4ff47437"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="7614dd02" targetConnections="62ab2090 7355168a d87eb346" archimateElement="44dec8c3">
+        <bounds x="265" y="274"/>
+        <sourceConnection xsi:type="archimate:Connection" id="0867df07" source="7614dd02" target="7ed50db6" relationship="a9bb2b5b"/>
+        <sourceConnection xsi:type="archimate:Connection" id="cd47c036" source="7614dd02" target="b192d557" relationship="ef879bcb"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="b192d557" targetConnections="96a58d2b cd47c036" archimateElement="8a9782c1">
+        <bounds x="85" y="273"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="0934cd8f" archimateElement="f7f7cef0">
+        <bounds x="265" y="372"/>
+        <sourceConnection xsi:type="archimate:Connection" id="62ab2090" source="0934cd8f" target="7614dd02" relationship="4b84f1d7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="65c423c0" targetConnections="93a94fe8 a6c68134 12265135" archimateElement="43013172">
+        <bounds x="684" y="144"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="1caeceec" targetConnections="779b7b81" archimateElement="4126a1f5">
+        <bounds x="552" y="144"/>
+        <sourceConnection xsi:type="archimate:Connection" id="a6c68134" source="1caeceec" target="65c423c0" relationship="e0f79ca7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="c4d3a2f1" targetConnections="285b5058" archimateElement="05bfd87b">
+        <bounds x="288" y="144"/>
+        <sourceConnection xsi:type="archimate:Connection" id="d87eb346" source="c4d3a2f1" target="7614dd02" relationship="82d5c010"/>
+      </child>
+      <documentation>The patch will add a
+- validation program path to preferences
+- a browser
+- a validator launcher</documentation>
+    </element>
+    <element xsi:type="archimate:DiagramModel" id="6eae4865" name="use case: setting/querying validation program">
+      <child xsi:type="archimate:DiagramObject" id="4fcb6205" targetConnections="8498dc74 4ba3a468" archimateElement="94be8e56">
+        <bounds x="232" y="140"/>
+        <sourceConnection xsi:type="archimate:Connection" id="bcfd4d23" source="4fcb6205" target="7036f57b" relationship="7f85cb00"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="b28b5c8e" archimateElement="6d58f76e">
+        <bounds x="36" y="140"/>
+        <sourceConnection xsi:type="archimate:Connection" id="8498dc74" source="b28b5c8e" target="4fcb6205" relationship="f73c7ac8"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="7036f57b" targetConnections="bcfd4d23" archimateElement="eb99e91d">
+        <bounds x="432" y="140"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="7db71a30" archimateElement="59e19910">
+        <bounds x="177" y="264" width="229" height="49"/>
+        <sourceConnection xsi:type="archimate:Connection" id="4ba3a468" source="7db71a30" target="4fcb6205" relationship="34f8c9ae"/>
+      </child>
+      <documentation>The pathname of the validation program can be given and viewed.</documentation>
+    </element>
+  </folder>
+  <property key="version" value="1.0"/>
+  <purpose>This is a feature request with use cases and implementation proposal for model validation feature in Archi ( http://archi.cetis.ac.uk/ )
+See also https://groups.google.com/forum/#!topic/archi-dev/ufnoXQcsq60
+</purpose>
+</archimate:model>

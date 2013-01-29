@@ -1,0 +1,67 @@
+body
+{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.nameOfModel {
+	color:#0588BA;
+	font-family:Arial;
+	font-size:20pt;
+	font-weight:bold;  
+}
+
+.TopLevel{
+	color:#0588BA;
+	font-family:Arial;
+	font-size:14pt;
+	font-weight:bold;  
+
+	border-top-color:#0588ba; 
+	border-top-style:solid; 
+	border-top-width:2pt; 
+}
+
+.SecondLevel{
+	color:#0588BA;
+	font-family:Arial;
+	font-size:10pt;
+	font-weight:bold;  
+}
+
+.ThirdLevel{
+	color:#0588BA;
+	font-family:Arial;
+	font-size:8pt;
+	font-weight:bold;  
+}
+
+.nameOfFolder2 {
+	color:#0588BA;
+	font-family:Arial;
+	font-size:10pt;
+	font-weight:bold;  
+}
+
+.headerOfTable {
+	color:#606060;
+	font-family:Arial; 
+	font-weight:bold;
+	bgcolor="#D2C8AE";
+}
+
+.footerOfTable {
+	color:#004080;
+	font-family:Arial;
+	font-size:8pt;
+	font-weight:bold;
+	bgcolor="#F2F0E6";
+}
+
+.tableOfFolders {
+	color:#707070;
+	font-family:Arial;
+	font-size:15pt;
+	font-weight:bold;
+}
+
