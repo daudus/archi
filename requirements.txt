@@ -6,3 +6,4 @@ archi
 3. The real name of the columns, i.e. @name of folders is needed (see RQ 2)
 4. Each category  (Actor, Function, ...) should depict the number of groups of their types ... row 110 in matrice_1.xsl
 5. cleansing CSS (levels, inhertance, ...) 
+6.
