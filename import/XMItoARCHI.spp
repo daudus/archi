@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;rdf;smil;svg;wml">
+		<File FilePath="analysisAppFunctions.xml" HomeFolder="Yes"/>
+		<File FilePath="analysisAppFunctions1.0.xml" HomeFolder="Yes"/>
+		<File FilePath="appLandscape.xml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
+		<File FilePath="xmi-to-html_analysisAppFunctions.xsl" HomeFolder="Yes"/>
+		<File FilePath="xmi-to-html_appLandscape.xsl" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XQuery Files" ExtStr="xq;xql;xquery"/>
+	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp">
+		<File FilePath="XSL Output.html" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
+		<File FilePath="xmi.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="Entities" ExtStr="ent"/>
+</Project>
