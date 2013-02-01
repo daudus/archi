@@ -3,7 +3,7 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:archimate="http://www.bolton.ac.uk/archimate" xmlns:dsk="http://www.d.eu" xmlns:n1="http://www.s.eu/schemas/archi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<xsl:output version="1.0" method="xml" indent="yes" encoding="UTF-8"/>
 <!-- for ilustration example see toc_example.xsl and toc_example.xml -->
-	<xsl:template match="/">
+	<xsl:template match="/" > 
 		<xsl:message>match="/"</xsl:message>
 		<xsl:for-each select=".">
 			<xsl:apply-templates mode="toc"/>
@@ -39,12 +39,12 @@
 						<tr>
 							<td width="50%">
 								<span style="font-size:10pt; font-weight:bold; ">
-									<xsl:text>Departments</xsl:text>
+									<xsl:text>Folders</xsl:text>
 								</span>
 							</td>
 							<td width="50%">
 								<span style="font-size:10pt; font-weight:bold; ">
-									<xsl:text>Persons</xsl:text>
+									<xsl:text>Types of elements</xsl:text>
 								</span>
 							</td>
 						</tr>
@@ -86,11 +86,7 @@
 															<a href="{concat(&apos;#&apos;,generate-id(preceding-sibling::dsk:markerbookmark[1]))}">
 																<span style="font-family:Arial; font-size:8pt; ">
 																	<xsl:number level="multiple" count="dsk:level[count(ancestor::dsk:level) >= 1]" format="A.1"/>
-																</span>
-																<span style="font-family:Arial; font-size:8pt; ">
 																	<xsl:text>&nbsp;</xsl:text>
-																</span>
-																<span style="font-family:Arial; font-size:8pt; ">
 																	<xsl:choose>
 																		<xsl:when test="@dsk:entrytext">
 																			<xsl:value-of select="@dsk:entrytext"/>
