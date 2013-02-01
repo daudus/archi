@@ -11,7 +11,7 @@
 
     Version:  January 29, 2013
 	pro XMI verze 2.1
-	EA Source: [Common - EA] - Common for all countries -.Architecture.Group Architecture Concepts.Application landscape models.Copy of Reference model - Application landscape with Homer Select 
+	EA Source: [BSL - EA] - Model.BSL.Analysis Model 
     
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml"  xmlns:uml="http://schema.omg.org/spec/UML/2.1" version="2.0" exclude-result-prefixes="#default">
