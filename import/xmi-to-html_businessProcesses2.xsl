@@ -101,7 +101,7 @@
 						</span>
 					</td>
 					<td width="80%">	
-						<!-- and Subpackagies --> 
+						<!-- and Subpackages --> 
 						<xsl:if test="$subpackages>0" >
 							<xsl:for-each select="packagedElement[@xmi:type='uml:Package']"><xsl:sort select="@name" order="ascending" data-type="text"/>
 								<dsk:level>

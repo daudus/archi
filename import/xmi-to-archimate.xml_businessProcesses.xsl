@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+    Title: xmi-to-archmate.xml.businessProcess.xsl
+    Purpose: An XSL stylesheet for converting SParxs EA XMI Export to the Archi.Archimate for import busiensss processes
+
+	 Based on ArgoUML 0.80 XMI to HTML.Copyright (C) 1999-2001, Objects by Design, Inc. All Rights Reserved.
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation.
+
+    Version:  February 5, 2013
+	pro XMI verze 2.1
+	EA Source: [BSL - EA] - Model.Business processes and Requirements.Business Processes
+    
+-->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.bolton.ac.uk/archimate" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" version="2.0" >
+	<xsl:output method="xml" indent="yes"  omit-xml-declaration="yes"/>
+
+
+	
+		<xsl:variable name="_composite_processes">
+			<cmp_processes>
+				<!-- first level ignoring -->
+				<xsl:apply-templates select="/xmi:XMI/uml:Model/packagedElement[1]/packagedElement[@xmi:type='uml:Package']" mode="top"/>
+			</cmp_processes>
+		</xsl:variable>			
+
+
+	
+	<!-- Document Root -->
+	<xsl:template match="/">
+		<xroot>
+			<cmp_processes>
+				<xsl:copy-of select="$_composite_processes/cmp_processes/element[@xsi:type='archimate:BusinessProcess']"/> 
+			</cmp_processes>
+			<cmp_relations>
+				<xsl:copy-of select="$_composite_processes/cmp_processes/element[@xsi:type='archimate:CompositionRelationship']"/> 
+			</cmp_relations>
+		</xroot>	
+	</xsl:template>
+
+	<xsl:template match="packagedElement[@xmi:type='uml:Package']" mode="top">
+		<xsl:variable name="composite" select="@name"/>
+		<xsl:variable name="guid" select="@xmi:id"/>
+		
+		<xsl:element name="element">
+			<xsl:attribute name="xsi:type">archimate:BusinessProcess</xsl:attribute>
+			<xsl:attribute name="id"><xsl:value-of  select="generate-id($composite)"/></xsl:attribute>
+			<xsl:attribute name="name"><xsl:value-of  select="$composite"/></xsl:attribute>
+
+			<xsl:element name="property">
+				<xsl:attribute name="key">GUID</xsl:attribute>
+				<xsl:attribute name="value"><xsl:value-of  select="$guid"/></xsl:attribute>
+			</xsl:element>
+		</xsl:element>
+		
+		<xsl:apply-templates select="packagedElement[@xmi:type='uml:Package']" mode="inner"/>
+		<xsl:apply-templates select="packagedElement[@xmi:type='uml:Activity']"/>
+	</xsl:template>
+
+	<xsl:template match="packagedElement[@xmi:type='uml:Package']" mode="inner">
+
+					<xsl:variable name="composite" select="@name"/>
+					<xsl:variable name="guid" select="@xmi:id"/>
+					
+					<xsl:element name="element">
+						<xsl:attribute name="xsi:type">archimate:BusinessProcess</xsl:attribute>
+						<xsl:attribute name="id"><xsl:value-of  select="generate-id($composite)"/></xsl:attribute>
+						<xsl:attribute name="name"><xsl:value-of  select="$composite"/></xsl:attribute>
+			
+						<xsl:element name="property">
+							<xsl:attribute name="key">GUID</xsl:attribute>
+							<xsl:attribute name="value"><xsl:value-of  select="$guid"/></xsl:attribute>
+						</xsl:element>
+					</xsl:element>
+
+					<xsl:element name="element">
+						<xsl:attribute name="xsi:type">archimate:CompositionRelationship</xsl:attribute>
+						<xsl:attribute name="id"><xsl:value-of  select="concat(generate-id($composite),'BpBpRel_')"/></xsl:attribute>
+						<!--package-->
+						<xsl:attribute name="source"><xsl:value-of select="generate-id(../@name)"/></xsl:attribute>
+						<!--function-->
+						<xsl:attribute name="target"><xsl:value-of select="generate-id($composite)"/></xsl:attribute>
+					</xsl:element>
+					
+					<xsl:apply-templates select="packagedElement[@xmi:type='uml:Package']" mode="inner"/>
+					<xsl:apply-templates select="packagedElement[@xmi:type='uml:Activity']"/>
+	</xsl:template>
+	
+	<xsl:template match="packagedElement[@xmi:type='uml:Activity']">
+		<xsl:variable name="activity" select="@name"/>
+		<xsl:variable name="guid" select="@xmi:id"/>
+		
+		<xsl:element name="element">
+			<xsl:attribute name="xsi:type">archimate:BusinessProcess</xsl:attribute>
+			<xsl:attribute name="id"><xsl:value-of  select="generate-id($activity)"/></xsl:attribute>
+			<xsl:attribute name="name"><xsl:value-of  select="concat('act_',$activity)"/></xsl:attribute>
+
+			<xsl:element name="property">
+				<xsl:attribute name="key">GUID</xsl:attribute>
+				<xsl:attribute name="value"><xsl:value-of  select="$guid"/></xsl:attribute>
+			</xsl:element>
+		</xsl:element>
+		
+		<!-- only one level is enough 
+		<xsl:apply-templates select="packagedElement[@xmi:type='uml:Activity']"/> -->
+
+		<!-- relation CmpActivity--> 
+		<xsl:element name="element">
+			<xsl:attribute name="xsi:type">archimate:CompositionRelationship</xsl:attribute>
+			<xsl:attribute name="id"><xsl:value-of  select="concat(generate-id($activity),'BpActRel_')"/></xsl:attribute>
+			<!--package-->
+			<xsl:attribute name="source"><xsl:value-of select="generate-id(../@name)"/></xsl:attribute>
+			<!--function-->
+			<xsl:attribute name="target"><xsl:value-of select="generate-id($activity)"/></xsl:attribute>
+		</xsl:element>
+	</xsl:template>	
+	
+</xsl:stylesheet>

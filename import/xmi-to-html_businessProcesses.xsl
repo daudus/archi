@@ -102,6 +102,7 @@
 	<!-- Activity -->
 	<xsl:template match="packagedElement[@xmi:type='uml:Activity']">
 		<xsl:param name="source"/>
+		<xsl:message>Activity Template</xsl:message>
 		<xsl:variable name="subfunctions" select="packagedElement"/>
 		<tr>
 			<td width="20%" class="info-title">Activities::</td>
