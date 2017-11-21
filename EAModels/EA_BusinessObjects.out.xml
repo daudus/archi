@@ -1,0 +1,330 @@
+<model xmlns:Archimate2="http://www.sparxsystems.com/profiles/Archimate2/1.0" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0">
+<objects>
+<element xsi:type="archimate:BusinessObject" id="EAID_900DE924_9336_4be9_B324_63B256EB2539" name="Account">
+<property key="GUID" value="EAID_900DE924_9336_4be9_B324_63B256EB2539"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_61AD4018_3D6E_4dfd_A27F_4E1D7D880E70" name="Accounting Transaction">
+<property key="GUID" value="EAID_61AD4018_3D6E_4dfd_A27F_4E1D7D880E70"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_D42CCBE2_A097_441a_9135_78CBE02D81CE" name="Applicant">
+<property key="GUID" value="EAID_D42CCBE2_A097_441a_9135_78CBE02D81CE"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_026456BC_1E98_4d02_A88B_5F42F987E815" name="Application">
+<property key="GUID" value="EAID_026456BC_1E98_4d02_A88B_5F42F987E815"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_58348886_7CAB_4013_89F6_98B280C6BC38" name="Assets">
+<property key="GUID" value="EAID_58348886_7CAB_4013_89F6_98B280C6BC38"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_948FB38B_0470_4242_AE87_B4993360AF09" name="B2B Interaction">
+<property key="GUID" value="EAID_948FB38B_0470_4242_AE87_B4993360AF09"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_F7592713_665C_4586_9EEE_22B422ABD8DD" name="Balance">
+<property key="GUID" value="EAID_F7592713_665C_4586_9EEE_22B422ABD8DD"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_F81E198E_734B_4d97_BB04_0F0CA269057D" name="Bill">
+<property key="GUID" value="EAID_F81E198E_734B_4d97_BB04_0F0CA269057D"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_3F5DDBB9_0D23_41c5_B525_A44233BF1F1F" name="Budget">
+<property key="GUID" value="EAID_3F5DDBB9_0D23_41c5_B525_A44233BF1F1F"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_8F3E784F_4E63_4b0f_81E3_7050B848C951" name="Business Place (Sales Point)">
+<property key="GUID" value="EAID_8F3E784F_4E63_4b0f_81E3_7050B848C951"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_E7A366E1_7356_4005_A267_DD0C85CB9AC7" name="Business Product">
+<property key="GUID" value="EAID_E7A366E1_7356_4005_A267_DD0C85CB9AC7"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_595D3DF8_50DB_47d0_8D82_22380E6EF931" name="Campaign">
+<property key="GUID" value="EAID_595D3DF8_50DB_47d0_8D82_22380E6EF931"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_B0DF8F34_F6E9_4cf4_A9FE_A670F8D85E59" name="Client">
+<property key="GUID" value="EAID_B0DF8F34_F6E9_4cf4_A9FE_A670F8D85E59"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_88CDA3C9_C1E0_4862_8E78_55459BE62BB8" name="Client Behavioural Profile">
+<property key="GUID" value="EAID_88CDA3C9_C1E0_4862_8E78_55459BE62BB8"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_8E9434B7_BFC7_4e01_B62B_8B5E9D114DFF" name="Closed-end Loan">
+<property key="GUID" value="EAID_8E9434B7_BFC7_4e01_B62B_8B5E9D114DFF"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_594D422A_41B6_4922_BB70_2E64BBB05A8D" name="Collateral">
+<property key="GUID" value="EAID_594D422A_41B6_4922_BB70_2E64BBB05A8D"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_1024C171_2652_442e_9C2C_8AE995D997DB" name="Collateral Value">
+<property key="GUID" value="EAID_1024C171_2652_442e_9C2C_8AE995D997DB"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_45D39F51_78BD_43a0_AAFB_1AAF5B35DACB" name="Communication Event">
+<property key="GUID" value="EAID_45D39F51_78BD_43a0_AAFB_1AAF5B35DACB"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_D76333F5_BD17_47c6_B44C_5231ABDBF3B4" name="Contact Mechanism">
+<property key="GUID" value="EAID_D76333F5_BD17_47c6_B44C_5231ABDBF3B4"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_5569CD33_854B_495f_A558_54649BC86C72" name="Contract (Agreement)">
+<property key="GUID" value="EAID_5569CD33_854B_495f_A558_54649BC86C72"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_B3969126_24A5_4206_AB52_F33B4AB6B07A" name="Contract1">
+<property key="GUID" value="EAID_B3969126_24A5_4206_AB52_F33B4AB6B07A"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_A456D3C3_9024_46bf_AFD2_65CDB75E7719" name="Contracted Product">
+<property key="GUID" value="EAID_A456D3C3_9024_46bf_AFD2_65CDB75E7719"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_5586E4C8_702C_40a2_85AD_1E539B3A22A3" name="Contractor">
+<property key="GUID" value="EAID_5586E4C8_702C_40a2_85AD_1E539B3A22A3"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_D673D83B_1E07_4880_A37E_A3EDF331C2E0" name="Costs">
+<property key="GUID" value="EAID_D673D83B_1E07_4880_A37E_A3EDF331C2E0"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_A9E90653_37C9_4ae3_837A_ED2CFD147F9F" name="Current Debt">
+<property key="GUID" value="EAID_A9E90653_37C9_4ae3_837A_ED2CFD147F9F"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_F3E24D13_6E68_4d94_93E4_D9A4FF9968F4" name="Customer">
+<property key="GUID" value="EAID_F3E24D13_6E68_4d94_93E4_D9A4FF9968F4"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_8E4B2FBF_4BFC_4304_B8B5_A60FDAFD3845" name="Customer Case">
+<property key="GUID" value="EAID_8E4B2FBF_4BFC_4304_B8B5_A60FDAFD3845"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_DFE5D0BD_4087_4ea3_B896_B064FE79985D" name="Customer Complain">
+<property key="GUID" value="EAID_DFE5D0BD_4087_4ea3_B896_B064FE79985D"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_B904BBEB_3653_4862_B641_72520C28694C" name="Customer Order">
+<property key="GUID" value="EAID_B904BBEB_3653_4862_B641_72520C28694C"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_95A7F964_62B9_49b2_BA37_117A680F40C1" name="Customer Order">
+<property key="GUID" value="EAID_95A7F964_62B9_49b2_BA37_117A680F40C1"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_CB0A8524_451D_4445_BD97_8C1277F4A6B0" name="Customer Service Enquiry">
+<property key="GUID" value="EAID_CB0A8524_451D_4445_BD97_8C1277F4A6B0"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_63E68C4D_DD84_4769_8C30_1862E0D390CC" name="Debt">
+<property key="GUID" value="EAID_63E68C4D_DD84_4769_8C30_1862E0D390CC"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_3C5ECEB4_2977_48c3_9D48_F019789D1661" name="Debt Collector">
+<property key="GUID" value="EAID_3C5ECEB4_2977_48c3_9D48_F019789D1661"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_F74DD46A_3546_43e2_B562_62BD474E3CFE" name="Disbursement">
+<property key="GUID" value="EAID_F74DD46A_3546_43e2_B562_62BD474E3CFE"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_CE60BD68_3F0B_4e4f_B8C3_A57BDB615D8D" name="Distribution Channel">
+<property key="GUID" value="EAID_CE60BD68_3F0B_4e4f_B8C3_A57BDB615D8D"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_214025D9_8961_4a9c_9C73_9C97142C5380" name="Drawing">
+<property key="GUID" value="EAID_214025D9_8961_4a9c_9C73_9C97142C5380"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_752FCF66_E097_4c66_A562_EB26C19282AC" name="Employee">
+<property key="GUID" value="EAID_752FCF66_E097_4c66_A562_EB26C19282AC"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_997088B8_C6E7_4801_92DC_0DA03697223A" name="Facility">
+<property key="GUID" value="EAID_997088B8_C6E7_4801_92DC_0DA03697223A"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_D63D18F8_2A58_4018_B310_A22A290C04BB" name="Field Visit">
+<property key="GUID" value="EAID_D63D18F8_2A58_4018_B310_A22A290C04BB"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_47D86B68_6107_4142_914B_17FE02512F0C" name="General Ledger">
+<property key="GUID" value="EAID_47D86B68_6107_4142_914B_17FE02512F0C"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_D48C71CE_4F75_4cdc_A76D_97B58183C289" name="Inbound Intercation">
+<property key="GUID" value="EAID_D48C71CE_4F75_4cdc_A76D_97B58183C289"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_BCE308E0_7DE8_491e_94D1_81366685064D" name="Income">
+<property key="GUID" value="EAID_BCE308E0_7DE8_491e_94D1_81366685064D"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_72E34CDF_1095_4625_A158_04288E4446AA" name="Installment Schedule">
+<property key="GUID" value="EAID_72E34CDF_1095_4625_A158_04288E4446AA"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E" name="Internal Organization">
+<property key="GUID" value="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_4D497C2C_BC6D_47d9_9A39_637F74F0CD62" name="Internal Organization Units">
+<property key="GUID" value="EAID_4D497C2C_BC6D_47d9_9A39_637F74F0CD62"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_EB2E2023_13E6_426a_8AD5_18BD5AE552F8" name="Job Catalogue">
+<property key="GUID" value="EAID_EB2E2023_13E6_426a_8AD5_18BD5AE552F8"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_4FDC3109_6B57_428c_B8DF_DA684C486D9E" name="Lead">
+<property key="GUID" value="EAID_4FDC3109_6B57_428c_B8DF_DA684C486D9E"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_0202C00D_4F50_454d_81DB_028FCDFBCC8F" name="Lease">
+<property key="GUID" value="EAID_0202C00D_4F50_454d_81DB_028FCDFBCC8F"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_C35746E5_CA6F_4c3c_BB24_CF9953FC1759" name="Letter Demand">
+<property key="GUID" value="EAID_C35746E5_CA6F_4c3c_BB24_CF9953FC1759"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_69AE318B_CD47_4612_81F7_0A6A3B2EB440" name="Marketing Offer">
+<property key="GUID" value="EAID_69AE318B_CD47_4612_81F7_0A6A3B2EB440"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_26FBC39C_41B6_4a8e_9F36_20BFD1D9C3EA" name="Marketing Offer Response">
+<property key="GUID" value="EAID_26FBC39C_41B6_4a8e_9F36_20BFD1D9C3EA"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_B6F511AA_6016_46fe_8B86_5878521F7B93" name="Master Agreement">
+<property key="GUID" value="EAID_B6F511AA_6016_46fe_8B86_5878521F7B93"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_1F4A33B6_BF47_4b96_9C59_CED3D0EA62C3" name="Organization">
+<property key="GUID" value="EAID_1F4A33B6_BF47_4b96_9C59_CED3D0EA62C3"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_FBEAF51E_5CE1_4e3d_B152_11048003F483" name="Organization Structure">
+<property key="GUID" value="EAID_FBEAF51E_5CE1_4e3d_B152_11048003F483"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_C420AFD1_4494_44bb_8ECF_86C00A089AC0" name="Outbound Interaction">
+<property key="GUID" value="EAID_C420AFD1_4494_44bb_8ECF_86C00A089AC0"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_A4CCB632_D959_4726_A8FF_7DBA484D09B0" name="Overdue Debt">
+<property key="GUID" value="EAID_A4CCB632_D959_4726_A8FF_7DBA484D09B0"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_540D40E9_3A9B_4f77_B5EE_5B830B09F8A0" name="Partner">
+<property key="GUID" value="EAID_540D40E9_3A9B_4f77_B5EE_5B830B09F8A0"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_3BE812C0_0304_4b2c_9CC0_D2CBD2F666C8" name="Partner's Business Place (Sales Point)">
+<property key="GUID" value="EAID_3BE812C0_0304_4b2c_9CC0_D2CBD2F666C8"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_ABC64CE6_7C51_4561_96E0_934C4B8866B0" name="Party">
+<property key="GUID" value="EAID_ABC64CE6_7C51_4561_96E0_934C4B8866B0"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_464C9A54_5682_4dab_88E6_668AE7E1583C" name="Party Contact Event">
+<property key="GUID" value="EAID_464C9A54_5682_4dab_88E6_668AE7E1583C"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_A6B2E9AD_5676_4a5e_8D8E_80D07B1C525B" name="Party Interaction">
+<property key="GUID" value="EAID_A6B2E9AD_5676_4a5e_8D8E_80D07B1C525B"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_101A8AAA_DD61_4c31_A44F_5C98EC1308B7" name="Party Need">
+<property key="GUID" value="EAID_101A8AAA_DD61_4c31_A44F_5C98EC1308B7"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_5088A777_F97B_4c9a_B615_A94DFFED2069" name="Payment">
+<property key="GUID" value="EAID_5088A777_F97B_4c9a_B615_A94DFFED2069"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_E8C0A60E_B31B_44da_818F_05FC55D89633" name="Payrol">
+<property key="GUID" value="EAID_E8C0A60E_B31B_44da_818F_05FC55D89633"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_9708BA1B_F441_4585_A921_36131FFEA078" name="Person">
+<property key="GUID" value="EAID_9708BA1B_F441_4585_A921_36131FFEA078"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_F5018EF6_4781_4afc_868D_F2DDD8BA9758" name="Product Offer">
+<property key="GUID" value="EAID_F5018EF6_4781_4afc_868D_F2DDD8BA9758"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_C8D98BAB_89F5_47a4_9D0F_5DB85B6C8542" name="Product Proposal">
+<property key="GUID" value="EAID_C8D98BAB_89F5_47a4_9D0F_5DB85B6C8542"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_06C8DF7B_5EE4_4910_9189_365A9D844116" name="Product/Service">
+<property key="GUID" value="EAID_06C8DF7B_5EE4_4910_9189_365A9D844116"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_023FC4CD_E589_42a6_8E80_5F68B45A9F14" name="Profit/Lost">
+<property key="GUID" value="EAID_023FC4CD_E589_42a6_8E80_5F68B45A9F14"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_8432A81F_6571_47e4_92F3_590E7BFCF93E" name="Promise To Pay">
+<property key="GUID" value="EAID_8432A81F_6571_47e4_92F3_590E7BFCF93E"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_4ED9A2C3_5BAB_45b3_8EEE_22F319CAE324" name="Prospect">
+<property key="GUID" value="EAID_4ED9A2C3_5BAB_45b3_8EEE_22F319CAE324"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_E7EC6CA5_36F0_48a9_8AE5_3C70E959E345" name="Recruiting Candidate">
+<property key="GUID" value="EAID_E7EC6CA5_36F0_48a9_8AE5_3C70E959E345"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_E6595322_A84A_459a_89A8_9C0A68C93DB2" name="Request for Proposal">
+<property key="GUID" value="EAID_E6595322_A84A_459a_89A8_9C0A68C93DB2"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_D2D25AB5_B31D_4d1b_8D72_8C05323D006E" name="Revolving Loan">
+<property key="GUID" value="EAID_D2D25AB5_B31D_4d1b_8D72_8C05323D006E"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_E315BA1C_3671_4a5b_9F04_AE4D000A0391" name="Risk Score">
+<property key="GUID" value="EAID_E315BA1C_3671_4a5b_9F04_AE4D000A0391"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_63751807_476E_49b8_B5D6_67F30838FD6C" name="Sales Bonus">
+<property key="GUID" value="EAID_63751807_476E_49b8_B5D6_67F30838FD6C"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_24512B7D_0EB4_4ff3_87FB_13E3CF17D7FF" name="Sales Partner Commission">
+<property key="GUID" value="EAID_24512B7D_0EB4_4ff3_87FB_13E3CF17D7FF"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_822A92B0_D051_49e5_B7B1_7200147A2D89" name="Service">
+<property key="GUID" value="EAID_822A92B0_D051_49e5_B7B1_7200147A2D89"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_7E9A6396_BDB7_4f8e_B6DC_2EB2D07B355A" name="Sub Agreement">
+<property key="GUID" value="EAID_7E9A6396_BDB7_4f8e_B6DC_2EB2D07B355A"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_249024D9_95D8_4d50_ABA4_C66B7DABBE8C" name="Tax">
+<property key="GUID" value="EAID_249024D9_95D8_4d50_ABA4_C66B7DABBE8C"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_C7439959_3CDB_4aa7_8A5B_FE7D147CF5BA" name="Telephone Demand">
+<property key="GUID" value="EAID_C7439959_3CDB_4aa7_8A5B_FE7D147CF5BA"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_54E8F339_B782_4642_BB04_B9FBB463125B" name="Vendor">
+<property key="GUID" value="EAID_54E8F339_B782_4642_BB04_B9FBB463125B"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_7AEF3A09_6879_4955_8213_1CBC1441527A" name="Vendor Contract (Agreement)">
+<property key="GUID" value="EAID_7AEF3A09_6879_4955_8213_1CBC1441527A"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_C17A4E02_750F_4ea9_8719_2F6E96265274" name="Vendor Payment">
+<property key="GUID" value="EAID_C17A4E02_750F_4ea9_8719_2F6E96265274"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_03D8FCB7_D72C_48fa_B053_91B9B9842BE8" name="Vendor Proposal">
+<property key="GUID" value="EAID_03D8FCB7_D72C_48fa_B053_91B9B9842BE8"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_89C0FBF5_C6F9_422a_8132_0CA949AFDD27" name="Worker">
+<property key="GUID" value="EAID_89C0FBF5_C6F9_422a_8132_0CA949AFDD27"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_E72621D8_E534_4107_9DB9_1D40663CCA25" name="Missing Product Specialization">
+<property key="GUID" value="EAID_E72621D8_E534_4107_9DB9_1D40663CCA25"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_5EC6458A_01C0_4bd5_8CFB_1EB0174AC16C" name="More details about Marketing/Campaigns">
+<property key="GUID" value="EAID_5EC6458A_01C0_4bd5_8CFB_1EB0174AC16C"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_3CD947F3_4EDE_4126_886D_C3407A9FE258" name="OnLine Channels - Initial &amp; engagements  - Twitter,Facebook, .....">
+<property key="GUID" value="EAID_3CD947F3_4EDE_4126_886D_C3407A9FE258"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_68863593_23E7_4208_8013_17CE0FA163E3" name="OnLine Channels - Sales &amp; Self Service">
+<property key="GUID" value="EAID_68863593_23E7_4208_8013_17CE0FA163E3"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_5DA71D1B_EA14_409c_B8A9_598020DB3585" name="Social Aspects">
+<property key="GUID" value="EAID_5DA71D1B_EA14_409c_B8A9_598020DB3585"/>
+</element>
+<element xsi:type="archimate:BusinessObject" id="EAID_DD7E7F60_97A7_491d_93CC_385FFE65C458" name="">
+<property key="GUID" value="EAID_DD7E7F60_97A7_491d_93CC_385FFE65C458"/>
+</element>
+</objects>
+<relations>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_4F18A41A_EF52_45d2_A800_71526DDF3FF8" name="" source="EAID_900DE924_9336_4be9_B324_63B256EB2539" target="EAID_F7592713_665C_4586_9EEE_22B422ABD8DD"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_9A39B156_FD3D_4007_B685_1F0CA4EA8A31" name="" source="EAID_900DE924_9336_4be9_B324_63B256EB2539" target="EAID_A456D3C3_9024_46bf_AFD2_65CDB75E7719"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_6D2FD841_888F_41ef_98E7_25D9984FA1AD" name="corespondend with" source="EAID_61AD4018_3D6E_4dfd_A27F_4E1D7D880E70" target="EAID_D673D83B_1E07_4880_A37E_A3EDF331C2E0"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_8D9E9BC8_419A_4f5d_BA61_732FDF8F4676" name="corespondend with" source="EAID_61AD4018_3D6E_4dfd_A27F_4E1D7D880E70" target="EAID_BCE308E0_7DE8_491e_94D1_81366685064D"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_F721F050_E948_4155_B19A_E1744507CD80" name="" source="EAID_61AD4018_3D6E_4dfd_A27F_4E1D7D880E70" target="EAID_47D86B68_6107_4142_914B_17FE02512F0C"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_DD37796A_E2BB_4ec9_8F84_67A3BFA0E785" name="apply for" source="EAID_D42CCBE2_A097_441a_9135_78CBE02D81CE" target="EAID_026456BC_1E98_4d02_A88B_5F42F987E815"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_A5C8E1D8_BC17_40d4_9201_DBE837DAE4E2" name="use" source="EAID_58348886_7CAB_4013_89F6_98B280C6BC38" target="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_1DBDC694_E9BA_45bc_93C1_D14841BC0AAF" name="" source="EAID_948FB38B_0470_4242_AE87_B4993360AF09" target="EAID_A6B2E9AD_5676_4a5e_8D8E_80D07B1C525B"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_A5D4D06E_952E_4715_809D_1EB5245F7E69" name="means" source="EAID_F7592713_665C_4586_9EEE_22B422ABD8DD" target="EAID_63E68C4D_DD84_4769_8C30_1862E0D390CC"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_4D3596B2_2884_4927_B4DF_C81AA1A87F6D" name="" source="EAID_F81E198E_734B_4d97_BB04_0F0CA269057D" target="EAID_5088A777_F97B_4c9a_B615_A94DFFED2069"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_4D2DF0DF_BE0F_4973_9944_7EAA74354806" name="Plans via" source="EAID_3F5DDBB9_0D23_41c5_B525_A44233BF1F1F" target="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_A4E6AAA8_CAA1_40ad_A40C_408EE3825E66" name="works at" source="EAID_8F3E784F_4E63_4b0f_81E3_7050B848C951" target="EAID_89C0FBF5_C6F9_422a_8132_0CA949AFDD27"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_7DCF56B6_321C_4013_BA06_971FBF863A4E" name="" source="EAID_B0DF8F34_F6E9_4cf4_A9FE_A670F8D85E59" target="EAID_B6F511AA_6016_46fe_8B86_5878521F7B93"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_877EDDBC_A65E_4fbe_AA96_25B4E0B051AF" name="can have" source="EAID_88CDA3C9_C1E0_4862_8E78_55459BE62BB8" target="EAID_F3E24D13_6E68_4d94_93E4_D9A4FF9968F4"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_9CBB8FD5_684D_4d26_B356_CEB13A990B91" name="" source="EAID_8E9434B7_BFC7_4e01_B62B_8B5E9D114DFF" target="EAID_72E34CDF_1095_4625_A158_04288E4446AA"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_F561545E_075A_45b2_8BBB_53E7B8D9AE42" name="" source="EAID_594D422A_41B6_4922_BB70_2E64BBB05A8D" target="EAID_1024C171_2652_442e_9C2C_8AE995D997DB"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_50204F1E_59B1_46cd_82BF_4C9B65CD2566" name="" source="EAID_594D422A_41B6_4922_BB70_2E64BBB05A8D" target="EAID_0202C00D_4F50_454d_81DB_028FCDFBCC8F"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_944D26E1_3C4F_43fd_A5C3_E2371B3F79BC" name="" source="EAID_5569CD33_854B_495f_A558_54649BC86C72" target="EAID_B6F511AA_6016_46fe_8B86_5878521F7B93"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_68AE3AC3_42B7_4ac7_8515_F77FD6FF7903" name="" source="EAID_A456D3C3_9024_46bf_AFD2_65CDB75E7719" target="EAID_822A92B0_D051_49e5_B7B1_7200147A2D89"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_695F2443_6FE9_4fc8_8212_76EE02E3FEA0" name="can be" source="EAID_5586E4C8_702C_40a2_85AD_1E539B3A22A3" target="EAID_89C0FBF5_C6F9_422a_8132_0CA949AFDD27"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_532622DF_7E38_43c7_A746_1D0C9B8D0C46" name="based on" source="EAID_D673D83B_1E07_4880_A37E_A3EDF331C2E0" target="EAID_023FC4CD_E589_42a6_8E80_5F68B45A9F14"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_3FDDCA18_4763_4e38_AD16_9E70E55FD5EC" name="can be" source="EAID_8E4B2FBF_4BFC_4304_B8B5_A60FDAFD3845" target="EAID_CB0A8524_451D_4445_BD97_8C1277F4A6B0"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_7618B194_812A_4cf4_9458_95DC2C8B41A3" name="can be" source="EAID_8E4B2FBF_4BFC_4304_B8B5_A60FDAFD3845" target="EAID_464C9A54_5682_4dab_88E6_668AE7E1583C"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_66091257_5317_44b2_B69F_5AAAA1396A1E" name="" source="EAID_F74DD46A_3546_43e2_B562_62BD474E3CFE" target="EAID_5088A777_F97B_4c9a_B615_A94DFFED2069"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_0776FF5C_0D3F_4f62_8BA7_4C8AB7DBBF72" name="" source="EAID_214025D9_8961_4a9c_9C73_9C97142C5380" target="EAID_72E34CDF_1095_4625_A158_04288E4446AA"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_E840733C_0D35_4bb3_96DA_4AC35E21E16D" name="can be" source="EAID_752FCF66_E097_4c66_A562_EB26C19282AC" target="EAID_89C0FBF5_C6F9_422a_8132_0CA949AFDD27"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_F182B83F_1BC8_41a7_AF0D_BB72B3D0C34F" name="" source="EAID_47D86B68_6107_4142_914B_17FE02512F0C" target="EAID_4D497C2C_BC6D_47d9_9A39_637F74F0CD62"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_DC46F300_FE13_4ece_BBF5_CA72FB2079E8" name="" source="EAID_D48C71CE_4F75_4cdc_A76D_97B58183C289" target="EAID_A6B2E9AD_5676_4a5e_8D8E_80D07B1C525B"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_620BD4FD_2D6E_4c29_AA5F_FFCCFDCEEBAE" name="based on" source="EAID_BCE308E0_7DE8_491e_94D1_81366685064D" target="EAID_023FC4CD_E589_42a6_8E80_5F68B45A9F14"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_7FDDB86F_E29B_4f43_A093_B7CA8EBAB94E" name="" source="EAID_72E34CDF_1095_4625_A158_04288E4446AA" target="EAID_0202C00D_4F50_454d_81DB_028FCDFBCC8F"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_0404906A_EE9B_40f6_8DE5_2D76CE0E2077" name="" source="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E" target="EAID_7AEF3A09_6879_4955_8213_1CBC1441527A"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_0AA13892_8E48_4aa7_B6A6_3F859B76F484" name="pay" source="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E" target="EAID_249024D9_95D8_4d50_ABA4_C66B7DABBE8C"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_94D5AE0D_3E8A_4730_B1D8_CE2D1BAD491C" name="Request/Need" source="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E" target="EAID_06C8DF7B_5EE4_4910_9189_365A9D844116"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_B3BDB862_C489_4dce_BAF7_0D26A58715AD" name="" source="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E" target="EAID_E6595322_A84A_459a_89A8_9C0A68C93DB2"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_BBA5C826_F3DE_42dc_8B59_C6B1B1CE11F2" name="make" source="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E" target="EAID_023FC4CD_E589_42a6_8E80_5F68B45A9F14"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_FE055690_D4C6_46af_AC6B_9976C42290FD" name="is divided into" source="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E" target="EAID_4D497C2C_BC6D_47d9_9A39_637F74F0CD62"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_FD5E9D0B_E7DA_459f_92DB_BD04C1D42446" name="can be" source="EAID_D2CD08BB_9390_43b3_A159_B8ECD7FE396E" target="EAID_1F4A33B6_BF47_4b96_9C59_CED3D0EA62C3"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_C521A443_FFE8_4609_B88E_ACD0EFD429D2" name="" source="EAID_C420AFD1_4494_44bb_8ECF_86C00A089AC0" target="EAID_A6B2E9AD_5676_4a5e_8D8E_80D07B1C525B"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_592A5E4A_4EB9_411b_926A_7732A9BEC502" name="" source="EAID_A4CCB632_D959_4726_A8FF_7DBA484D09B0" target="EAID_8432A81F_6571_47e4_92F3_590E7BFCF93E"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_E91EE262_00B4_4d7d_A090_2713C1F96568" name="can be" source="EAID_540D40E9_3A9B_4f77_B5EE_5B830B09F8A0" target="EAID_54E8F339_B782_4642_BB04_B9FBB463125B"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_E6085853_6339_4450_8305_311E0F31D675" name="" source="EAID_3BE812C0_0304_4b2c_9CC0_D2CBD2F666C8" target="EAID_24512B7D_0EB4_4ff3_87FB_13E3CF17D7FF"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_DD840FA4_645B_4ddd_8BF5_9F16F846C831" name="" source="EAID_ABC64CE6_7C51_4561_96E0_934C4B8866B0" target="EAID_A6B2E9AD_5676_4a5e_8D8E_80D07B1C525B"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_40640508_353C_469c_85C5_064779C91CE0" name="presented as" source="EAID_06C8DF7B_5EE4_4910_9189_365A9D844116" target="EAID_03D8FCB7_D72C_48fa_B053_91B9B9842BE8"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_997BE9E6_6287_4987_8DD3_C4EA536B1017" name="Provide" source="EAID_06C8DF7B_5EE4_4910_9189_365A9D844116" target="EAID_54E8F339_B782_4642_BB04_B9FBB463125B"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_30CF47DE_A081_4148_B4C0_AFD3930E877E" name="" source="EAID_E6595322_A84A_459a_89A8_9C0A68C93DB2" target="EAID_03D8FCB7_D72C_48fa_B053_91B9B9842BE8"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_62AEF298_0B4D_4fc8_87EE_B66DBF207DB3" name="" source="EAID_63751807_476E_49b8_B5D6_67F30838FD6C" target="EAID_89C0FBF5_C6F9_422a_8132_0CA949AFDD27"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_4BC10AA0_F815_4a8d_81AD_45B74FADE0AA" name="determines" source="EAID_7AEF3A09_6879_4955_8213_1CBC1441527A" target="EAID_C17A4E02_750F_4ea9_8719_2F6E96265274"/>
+<element xsi:type="archimate:AssociationRelationship" id="EAID_69B0588E_A1BF_48fd_8983_3D4175564813" name="" source="EAID_7AEF3A09_6879_4955_8213_1CBC1441527A" target="EAID_03D8FCB7_D72C_48fa_B053_91B9B9842BE8"/>
+</relations>
+</model> Version:1.0Archimate2 Version:1.0
